@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo thao tác với mảng</title>
+    <style>
+        body {padding-top:50px}
+    </style>
+</head>
+<body>
+<input type="text" id="txt">
+<input type="button" id="btnadd" value="add" onclick="add_to_array()">
+<input type="button" id="btndiss" value="diss" onclick="diss_to_array()">
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    function add_to_array() {
+        array[x] =document.getElementById("txt").value;
+        alert("số " + array[x] + " đã vào danh sách" );
+        x++;
+        document.getElementById("txt").value=" ";
+    }
+    function diss_to_array() {
+        let e = "<hr/>";
+        for (let i = 0;i < array.length;i++){
+            e += "số " + i + "=" + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</body>
+</html>
